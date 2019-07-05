@@ -1,0 +1,52 @@
+//buildscript {
+//    repositories {
+//        google()
+//        jcenter()
+//    }
+//
+//    dependencies {
+//
+//    }
+//}
+
+apply plugin: 'groovy'
+//apply plugin: 'maven'
+
+
+repositories {
+    google()
+    mavenCentral()
+    jcenter()
+    //引用 google() 让 compile 'com.android.tools.build:gradle:3.0.1' 通过
+//    maven {
+//        // 美图公司内部的 maven url
+//        url "https://maven.meitu.city/"
+//    }
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+
+    compile 'com.android.tools.build:gradle:3.4.1'
+    compile 'org.javassist:javassist:3.22.0-GA'
+    compile 'commons-io:commons-io:2.5'
+}
+
+
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            //设置插件的GAV参数
+//            pom.groupId = 'cn.andaction.plugin'
+//            pom.version = '1.0.0'
+//            //文件发布到下面目录
+//            repository(url: uri('../repo'))
+//        }
+//    }
+//}
+
+
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
